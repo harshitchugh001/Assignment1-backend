@@ -12,7 +12,7 @@ const passengerSchema = new mongoose.Schema({
   seatNumber: {
     type: String,
     required: true,
-  },
+  }
 });
 
 const Passenger = mongoose.model('Passenger', passengerSchema);

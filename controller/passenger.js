@@ -1,6 +1,7 @@
 const Passenger = require('../model/passenger');
+const mongoose = require('mongoose');
 
-// add a new passenger
+
 exports.addPassenger = async (req, res) => {
   try {
     const { name, destination, seatNumber } = req.body;
@@ -12,7 +13,6 @@ exports.addPassenger = async (req, res) => {
   }
 };
 
-// Get a list of all passengers
 exports.getAllPassengers = async (req, res) => {
   try {
     const passengers = await Passenger.find();

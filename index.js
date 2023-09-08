@@ -25,6 +25,7 @@ mongoose.connection.on("error", err => {
 // // import routes
 const authRoutes = require('./routes/auth');
 const passengerRoutes = require('./routes/passenger');
+const foodRoutes=require('./routes/food');
 // const labelRoute=require('./routes/label');
 
 
@@ -42,6 +43,7 @@ app.use(cors());
 // // middleware
 app.use('/api', authRoutes);
 app.use('/api',passengerRoutes);
+app.use('/api',foodRoutes);
 // app.use('/api',labelRoute);
 
 
